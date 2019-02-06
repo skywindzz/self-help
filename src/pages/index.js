@@ -1,21 +1,47 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
+import indexStyle from "../style/index.css"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
-  <Layout>
+  <indexStyle>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+    <header css={{
+      marginTop: 0,
+      marginBottom: 0,
+      marginLeft: 0,
+      marginRight: 0
+    }}>
+    </header>
+    <nav css={{
+      marginTop: 0,
+      marginBottom: 0,
+      marginLeft: 0,
+      marginRight: 0
+    }}>
+      <Link to="/">Home</Link>
+      <Link to="/brainstorm/">Planning</Link>
+      <Link to="/habit/">Habit</Link>
+      <Link to="/daily/">Daily</Link>
+      <Link to="/about/">About</Link>
+    </nav>
+    <div
+    css={{
+      backgroundColor: 'hotpink',
+      '&:hover': {
+        color: 'lightgreen'
+      },
+      marginTop: 0,
+      marginBottom: 0,
+      marginLeft: 0,
+      marginRight: 0
+    }}
+  >
+    This has a hotpink background.
+  </div>
+    
+  </indexStyle>
 )
 
 export default IndexPage
