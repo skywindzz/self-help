@@ -1,15 +1,26 @@
-import React from "react"
+import React, { useState } from "react"
+import { setConfig /* , cold */ } from 'react-hot-loader'
 import {Link} from 'gatsby'
-
 import SEO from "../components/seo"
 import "../style/index.css"
 import Navbar from "../components/navbar"
 
+setConfig({
+  pureSFC: true,
+});
 
-const IndexPage = () => (
+const IndexPage = () => {
+  const [test, changeTest] = useState('hello')
+
+  function sayCheese() {
+    changeTest('Cheese');
+  }
+
+  return (
+
   <div css={{
     display: 'grid'
-  }}>
+  }} onClick={sayCheese}>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <header css={{
       height: '200px',
@@ -36,9 +47,10 @@ const IndexPage = () => (
     This has a hotpink background.
   </div>
     <footer>
-      <Link to="./about">About</Link>
+      <Link to="./about">just {test}</Link>
     </footer>
   </div>
-)
+  )
+  }
 
 export default IndexPage
