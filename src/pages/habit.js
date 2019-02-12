@@ -1,9 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
+import HabitCard from '../components/habitcard'
 
 const Habit = () => (
     <div>
-        <p>just making sure it linked</p>
+        <HabitCard></HabitCard>
         <Link to="/">Go back to the homepage</Link>
     </div>
 )
