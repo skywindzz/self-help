@@ -17,38 +17,44 @@ const IndexPage = () => {
   }
 
   return (
+  <div>
+    <div css={{
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr 1fr',
+      gridTemplateRows: '50px 100vh',
+      !! work out how to do this gridTemplateAreas: '
+        Navbar
+        header div footer ',
+    }} onClick={sayCheese}>
+      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <Navbar></Navbar>
+      {/* will need to make a index page navbar which have sign in, new account on top
+      and a faq link on bottom for intro
+      it will need 3 photos each seperate the planning, habit, daily page which is 
+      acessable once signed in if not signed in direct to new account page*/}
+      
+      <header css={{
+        backgroundColor: 'blue'
+      }}>ORIGIN</header>
 
-  <div css={{
-    display: 'grid'
-  }} onClick={sayCheese}>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <header css={{
-      height: '200px',
-      backgroundColor: 'blue'
-    }}>SELF</header>
-
-    {/*navbar is here before we split this page into three sections
-    Daily, habit, brainstorm at the footer we'll have the about page */}
-    
-    <Navbar></Navbar>
-
-    <div
-    css={{
-      backgroundColor: 'hotpink',
-      '&:hover': {
-        color: 'lightgreen'
-      },
-      marginTop: 0,
-      marginBottom: 0,
-      marginLeft: 0,
-      marginRight: 0
-    }}
-  >
-    This has a hotpink background.
-  </div>
-    <footer>
-      <Link to="./about">just {test}</Link>
-    </footer>
+      <div
+      css={{
+        backgroundColor: 'hotpink',
+        '&:hover': {
+          color: 'lightgreen'
+        },
+        marginTop: 0,
+        marginBottom: 0,
+        marginLeft: 0,
+        marginRight: 0
+      }}
+    >
+      This has a hotpink background.
+    </div>
+      <footer css={{ backgroundColor: 'lightGreen'}}>
+        <Link to="./about">just {test}</Link>
+      </footer>
+    </div>
   </div>
   )
   }

@@ -2,14 +2,10 @@ body,html {
     margin: 0;
     padding: 0;
     display: grid;
-    background-color: pink; 
     height: 100vh;
+    overflow: hidden;
 }
 
 * {
     box-sizing: border-box;
-}
-
-.nav-link {
-   margin-right: 20px
 }

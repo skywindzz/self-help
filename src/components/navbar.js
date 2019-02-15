@@ -10,7 +10,10 @@ const Navbar = () => (
         height: '50px',
         alignItems: 'center',
         background: 'white',
-        fontSize: '1.2em'
+        fontSize: '1.2em',
+        marginRight: '20px',
+        opacity: '0.3',
+        
     }}>
         <Link to="/"><FaHome /></Link>
         <Link to="/brainstorm/">Planning</Link>
