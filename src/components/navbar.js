@@ -2,8 +2,9 @@ import { Link } from "gatsby"
 import React, { useState } from "react"
 import { FaHome } from 'react-icons/fa'
 
-const Navbar = () => (
+const Navbar = props => {
 
+    return (
     <nav css={{
         display: 'flex',
         justifyContent: 'space-evenly',
@@ -14,11 +15,13 @@ const Navbar = () => (
         marginRight: '20px',
         opacity: '0.3',
         
-    }}>
+    }}> 
+        {props.children}
         <Link to="/"><FaHome /></Link>
         <Link to="/brainstorm/">Planning</Link>
         <Link to="/habit/">Habit</Link>
         <Link to="/daily/">Daily</Link>
     </nav>
-)
+    )
+}
 export default Navbar

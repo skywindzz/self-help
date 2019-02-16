@@ -3,60 +3,30 @@ import { setConfig /* , cold */ } from 'react-hot-loader'
 import {Link} from 'gatsby'
 import SEO from "../components/seo"
 import "../style/index.css"
-import Navbar from "../components/navbar"
+import NewAccount from '../components/newAccount'
 
 setConfig({
   pureSFC: true,
 });
 
 const IndexPage = () => {
-  const [test, changeTest] = useState('hello')
+  const [loggedIn, changeLogin] = useState(false)
 
-  function sayCheese() {
-    changeTest('Cheese');
-  }
+  /* this page is only for looks and intro, top navbar has logo login or new account
+  button rest of page will be occupied by slideshow with pictures and quotes, upon
+  clicking sign in or sign up modal will appear and ask user to enter information */
 
   return (
-  <div>
-    <div css={{
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr 1fr',
-      gridTemplateRows: '50px 100vh',
-      !! work out how to do this gridTemplateAreas: '
-        Navbar
-        header div footer ',
-    }} onClick={sayCheese}>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <Navbar></Navbar>
-      {/* will need to make a index page navbar which have sign in, new account on top
-      and a faq link on bottom for intro
-      it will need 3 photos each seperate the planning, habit, daily page which is 
-      acessable once signed in if not signed in direct to new account page*/}
-      
-      <header css={{
-        backgroundColor: 'blue'
-      }}>ORIGIN</header>
-
-      <div
-      css={{
-        backgroundColor: 'hotpink',
-        '&:hover': {
-          color: 'lightgreen'
-        },
-        marginTop: 0,
-        marginBottom: 0,
-        marginLeft: 0,
-        marginRight: 0
-      }}
-    >
-      This has a hotpink background.
+    <div>
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <div>
+        <Link to="./loggedIn">sign in</Link>
+        <Link to="./newAccount">Sign up</Link>
+        
+      </div>
+    
     </div>
-      <footer css={{ backgroundColor: 'lightGreen'}}>
-        <Link to="./about">just {test}</Link>
-      </footer>
-    </div>
-  </div>
   )
-  }
+}
 
 export default IndexPage

@@ -1,6 +1,6 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 
-const habitCard = () => {
+const HabitCard = () => {
     const [habitName, changeHabitName] = useState('')
     const [priority, changePriority] = useState('')
     const [fourLaws, changeFourLaws] = useState({
@@ -38,4 +38,4 @@ const habitCard = () => {
     )
 }
 
-export default habitCard
+export default HabitCard
