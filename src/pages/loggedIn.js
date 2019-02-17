@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { setConfig /* , cold */ } from 'react-hot-loader'
 import {Link} from 'gatsby'
 import "../style/index.css"
+import LogOut from '../components/logout'
 
 setConfig({
   pureSFC: true,
@@ -16,6 +17,7 @@ const IndexPage = () => {
 
   return (
   <div>
+    <LogOut></LogOut>
     <div css={{
       display: 'grid',
       gridTemplateColumns: '1fr 1fr 1fr',

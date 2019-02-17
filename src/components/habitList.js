@@ -6,5 +6,9 @@ user's account and allow user to add or remove habit use firebase
 and see if graphql can query from firebase*/
 
 const HabitList = props => {
-    console.log('hello this is Habitlist')
+    return (
+        <h1>This page will display all your habitcards and allow user to add habitcards</h1>
+    )
 }
+
+export default HabitList
