@@ -4,8 +4,24 @@ body,html {
     display: grid;
     height: 100vh;
     overflow: hidden;
+    /*working on gray out background image 
+    background-image: url('../images/stone-water-ripple-clipart-10-1170x658.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.4;
+    filter: alpha(opacity=40); 
+    */
 }
 
 * {
     box-sizing: border-box;
+}
+
+
+.navItem {
+    margin-right: 2em;
 }

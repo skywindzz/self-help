@@ -5,7 +5,7 @@ const SignIn = () => {
     in direct to loggedIn page otherwise display appropriate errors*/}
 
     return (
-        <button>Sign in</button>
+        <div css={{ marginRight: '2em' }}>Sign in</div>
     )
 }
 

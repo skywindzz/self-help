@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
 import { FaHome } from 'react-icons/fa'
+import Logout from '../components/logout'
 
 const Navbar = props => {
 
@@ -10,17 +11,17 @@ const Navbar = props => {
         justifyContent: 'space-evenly',
         height: '50px',
         alignItems: 'center',
-        background: 'white',
+        background: 'green',
         fontSize: '1.2em',
         marginRight: '20px',
         opacity: '0.3',
-        
     }}> 
         {props.children}
-        <Link to="/"><FaHome /></Link>
+        <Link to="/loggedIn"><FaHome /></Link>
         <Link to="/brainstorm/">Planning</Link>
         <Link to="/habit/">Habit</Link>
         <Link to="/daily/">Daily</Link>
+        <Logout></Logout>
     </nav>
     )
 }

@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import "../style/index.css"
 import NewAccount from '../components/newAccount'
 import SignIn from '../components/signIn'
+import Img from "gatsby-image"
 
 setConfig({
   pureSFC: true,
@@ -20,16 +21,15 @@ const IndexPage = () => {
   return (
     <div>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <div>
-        <Link to="/loggedIn">loggedIn Page</Link>
-        <Link to="/about">About Origin</Link>
-       <SignIn></SignIn>
-       <NewAccount></NewAccount>
-
-
-        
+        <nav css={{ display: 'flex', justifyContent: 'flex-end', flexFlow: 'row wrap', height: '50px', backGroundColor: 'green', alignItems: 'center' }}>
+          <Link to="/loggedIn" className="navItem">loggedIn Page</Link>
+          <Link to="/about" className="navItem">About Origin</Link>
+          <SignIn></SignIn>
+          <NewAccount></NewAccount>
+      </nav>
+      <div css={{ display: 'flex', justifyContent: 'center', fontFamily: 'Billy Ohio', fontSize: '300px', color: 'orange', marginTop: '200px' }}>
+        ORIGIN
       </div>
-    
     </div>
   )
 }
