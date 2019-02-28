@@ -11,7 +11,7 @@ const Navbar = props => {
         justifyContent: 'space-evenly',
         height: '50px',
         alignItems: 'center',
-        background: 'green',
+        backgroundColor: 'white',
         fontSize: '1.2em',
         marginRight: '20px',
         opacity: '0.3',

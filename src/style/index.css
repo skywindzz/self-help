@@ -4,17 +4,32 @@ body,html {
     display: grid;
     height: 100vh;
     overflow: hidden;
-    /*working on gray out background image 
-    background-image: url('../images/stone-water-ripple-clipart-10-1170x658.jpg');
+    font-family: Helvetica Neue;
+    grid-template-rows: 100px auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+     "navigation"
+     "content"
+
+    /* might want to look for another background
+    background: linear-gradient(rgba(37,35,35,0.5), rgba(37, 35, 35, 0.5)), url('../images/stone-water-ripple-clipart-10-1170x658.jpg');
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    opacity: 0.4;
-    filter: alpha(opacity=40); 
     */
+}
+
+.nav {
+    grid-area: navigation;
+}
+
+.body {
+   grid-area: content;
+   grid-template-rows: 1fr min-content;
+   height: 100vh;
 }
 
 * {
@@ -24,4 +39,5 @@ body,html {
 
 .navItem {
     margin-right: 2em;
+    text-decoration: none;
 }
