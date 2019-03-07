@@ -18,7 +18,7 @@ const Navbar = props => {
     }}> 
         {props.children}
         <Link to="/loggedIn"><FaHome /></Link>
-        <Link to="/brainstorm/">Planning</Link>
+        <Link to="/planning/">Planning</Link>
         <Link to="/habit/">Habit</Link>
         <Link to="/daily/">Daily</Link>
         <Logout></Logout>

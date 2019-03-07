@@ -7,9 +7,12 @@ const HabitCard = () => {
     const [duration, changeDuration] = useState('')
     const [time, changeTime] = useState('')
     const [inverse, inverseToTrue] = useState(false)
+    const [habitCard, setHabitCard] = useState({
+
+    })
 
     function submitHabit () {
-        console.log('clicked')
+        console.log('setting up')
     }
 
     return (

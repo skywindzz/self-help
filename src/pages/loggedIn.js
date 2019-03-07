@@ -50,10 +50,11 @@ const IndexPage = () => {
         marginLeft: 0,
         marginRight: 0,
         gridArea: 'plan'
-      }}
-    >
-      Planning
-    </div>
+      }}>
+
+      <Link to="/planning">Planning</Link>
+      </div>
+      
       <div css={{ 
           backgroundColor: 'lightGreen',
           gridArea: 'habit' }}>
@@ -61,7 +62,7 @@ const IndexPage = () => {
       </div>
 
       <div css={{ gridArea: 'daily'}}> 
-        Daily page
+        <Link to="/daily">Daily page</Link>
       </div>
     </div>
   </div>

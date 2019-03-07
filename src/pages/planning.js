@@ -2,12 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 import Navbar from '../components/navbar'
 
-const Brainstorm = () => (
+const Planning = () => (
     <div>
         <Navbar></Navbar>
-        <p>just making sure it linked</p>
+        <p>This is planning page</p>
         <Link to="/">Go back to the homepage</Link>
     </div>
 )
 
-export default Brainstorm
+export default Planning
