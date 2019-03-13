@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Origin`,
+    description: `Self improvment`,
+    author: `Anthony Liang`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,11 +30,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-emotion`,
       options: {
-         // sourceMap is on by default but source maps are dead code eliminated in production
-         "sourceMap": true,
-         "autoLabel": process.env.NODE_ENV !== 'production',
-         "labelFormat": "[local]",
-         "cssPropOptimization": true
+        // sourceMap is on by default but source maps are dead code eliminated in production
+        "sourceMap": true,
+        "autoLabel": process.env.NODE_ENV !== 'production',
+        "labelFormat": "[local]",
+        "cssPropOptimization": true
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

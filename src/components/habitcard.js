@@ -7,10 +7,9 @@ const HabitCard = () => {
     const [duration, changeDuration] = useState('')
     const [time, changeTime] = useState('')
     const [inverse, inverseToTrue] = useState(false)
-    const [habitCard, setHabitCard] = useState({
-
-    })
-
+    
+    {/* in this component you'll take the input of the user and save it into the habitCard object 
+    on the parent which is the */}
     function submitHabit () {
         console.log('setting up')
     }
