@@ -23,6 +23,7 @@ const IndexPage = () => {
     <div>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <nav className='nav' css={{ display: 'flex', justifyContent: 'flex-end', flexFlow: 'row wrap', height: '50px', backGroundColor: 'green', alignItems: 'center', opacity: '0.5' }}>
+        {/*figure out importing auth0 stuff here and make the login work*/}
           <Link to="/loggedIn" className="navItem">LoggedIn Page</Link>
           <Link to="/about" className="navItem">About Origin</Link>
           <SignIn></SignIn>

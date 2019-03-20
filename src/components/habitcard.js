@@ -11,7 +11,7 @@ const HabitCard = () => {
     {/* in this component you'll take the input of the user and save it into the habitCard object 
     on the parent which is the */}
     function submitHabit () {
-        console.log('setting up')
+        console.log('setting up here')
     }
 
     return (

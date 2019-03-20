@@ -1,8 +1,8 @@
 import auth0 from 'auth0-js'
 import {navigate} from 'gatsby'
 
-const AUTH0_DOMAIN = '<your domain>.auth0.com'
-const AUTH0_CLIENT_ID = '<your client id>'
+const AUTH0_DOMAIN = 'aliang.auth0.com'
+const AUTH0_CLIENT_ID = 'VTXLCtdH7q-9NwTWUD0ObP88cC_zC0yN'
 
 export default class Auth {
     auth0 = new auth0.WebAuth({
@@ -15,9 +15,7 @@ export default class Auth {
     })
 
     login = () => {
-        this
-            .auth0
-            .authorize()
+        this.auth0.authorize()
     }
 
     logout = () => {
@@ -29,23 +27,17 @@ export default class Auth {
 
     handleAuthentication = () => {
         if (typeof window !== 'undefined') {
-            // this must've been the trick
-            this
-                .auth0
-                .parseHash((err, authResult) => {
-                    if (authResult & amp;
-                    &amp;
-                    authResult.accessToken & amp;
-                    &amp;
-                    authResult.idToken) {
-                        this.setSession(authResult)
-                    } else if (err) {
-                        console.log(err)
-                    }
-
-                    // Return to the homepage after authentication.
-                    navigate('/')
-                })
+          // this must've been the trick
+          this.auth0.parseHash((err, authResult) => {
+            if (authResult && authResult.accessToken && authResult.idToken) {
+              this.setSession(authResult)
+            } else if (err) {
+              console.log(err)
+            }
+     
+            // Return to the homepage after authentication.
+            navigate('/')
+          })
         }
     }
 
