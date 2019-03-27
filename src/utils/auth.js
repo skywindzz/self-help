@@ -15,7 +15,9 @@ export default class Auth {
     })
 
     login = () => {
-        this.auth0.authorize()
+        this
+            .auth0
+            .authorize()
     }
 
     logout = () => {
@@ -23,21 +25,24 @@ export default class Auth {
         localStorage.removeItem('id_token')
         localStorage.removeItem('expires_at')
         localStorage.removeItem('user')
+        navigate('../pages/index')
     }
 
     handleAuthentication = () => {
         if (typeof window !== 'undefined') {
-          // this must've been the trick
-          this.auth0.parseHash((err, authResult) => {
-            if (authResult && authResult.accessToken && authResult.idToken) {
-              this.setSession(authResult)
-            } else if (err) {
-              console.log(err)
-            }
-     
-            // Return to the homepage after authentication.
-            navigate('/')
-          })
+            // this must've been the trick
+            this
+                .auth0
+                .parseHash((err, authResult) => {
+                    if (authResult && authResult.accessToken && authResult.idToken) {
+                        this.setSession(authResult)
+                    } else if (err) {
+                        console.log(err)
+                    }
+
+                    // get to loggedIn page after auth
+                    navigate('../pages/loggedIn')
+                })
         }
     }
 
