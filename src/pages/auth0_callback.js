@@ -8,6 +8,7 @@ const Auth0CallbackPage = () => {
     useComponentDidMount(() => {
         const auth = new Auth()
         auth.handleAuthentication()
+        console.log('hitting auth0 callback')
     })
 
     return (

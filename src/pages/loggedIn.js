@@ -4,7 +4,6 @@ import {
 } from 'react-hot-loader'
 import {Link} from 'gatsby'
 import "../style/index.css"
-import Navbar from '../components/navbar'
 import Logout from '../components/logout'
 
 setConfig({pureSFC: true});

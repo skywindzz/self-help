@@ -17,7 +17,8 @@ export default class Auth {
     login = () => {
         this
             .auth0
-            .authorize()
+            .authorize();
+        navigate('/auth0_callback')
     }
 
     logout = () => {
@@ -25,7 +26,7 @@ export default class Auth {
         localStorage.removeItem('id_token')
         localStorage.removeItem('expires_at')
         localStorage.removeItem('user')
-        navigate('../pages/index')
+        navigate('/')
     }
 
     handleAuthentication = () => {
@@ -36,12 +37,13 @@ export default class Auth {
                 .parseHash((err, authResult) => {
                     if (authResult && authResult.accessToken && authResult.idToken) {
                         this.setSession(authResult)
+                        console.log('i am in')
                     } else if (err) {
                         console.log(err)
                     }
 
                     // get to loggedIn page after auth
-                    navigate('../pages/loggedIn')
+                    navigate('loggedIn')
                 })
         }
     }

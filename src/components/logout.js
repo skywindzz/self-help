@@ -1,15 +1,14 @@
 import React from 'react'
 import { navigate } from "gatsby"
+import Auth from '../utils/auth.js'
+
+const auth = new Auth();
 
 const LogOut = () => {
     {/*This component will Logout user and return them to landing page */}
 
-    function homepage () {
-        navigate("/")
-    }
-
     return (
-        <a onClick={homepage}>LogOut</a>
+        <a onClick={auth.logout}>LogOut</a>
     )
 }
 

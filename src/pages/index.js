@@ -2,26 +2,12 @@ import React, {useState} from "react"
 import {
   setConfig/* , cold */
 } from 'react-hot-loader'
-import {Link, navigateTo} from 'gatsby'
+import {Link} from 'gatsby'
 import SEO from "../components/seo"
 import "../style/index.css"
-import NewAccount from '../components/newAccount'
-import SignIn from '../components/signIn'
-import Img from "gatsby-image"
-import Auth from '../utils/auth'
+import Login from '../components/login'
+/* import Img from "gatsby-image" */
 
-const auth = new Auth()
-
-const Login = () => {
-  const {isAuthenticated} = auth
-
-  if (isAuthenticated()) {
-    return <button onClick={auth.logout}>Logout {auth.getUserName()}</button>
-  } else {
-    return <button onClick={auth.login}>Login</button>
-  }
-
-}
 setConfig({pureSFC: true});
 /*This is your landing page should contain signup and sign in options, */
 const IndexPage = () => {
@@ -48,11 +34,8 @@ const IndexPage = () => {
         opacity: '0.5'
       }}>
         {/*figure out importing auth0 stuff here and make the login work*/}
-        <Login>login</Login>
-        <Link to="/loggedIn" className="navItem">LoggedIn Page</Link>
         <Link to="/about" className="navItem">About Origin</Link>
-        <SignIn></SignIn>
-        <NewAccount></NewAccount>
+        <Login className="loginStyle">login</Login>
       </nav>
       <div
         className='body'
