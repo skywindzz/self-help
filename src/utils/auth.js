@@ -15,10 +15,7 @@ export default class Auth {
     })
 
     login = () => {
-        this
-            .auth0
-            .authorize();
-        navigate('/auth0_callback')
+        this.auth0.authorize();
     }
 
     logout = () => {
@@ -29,7 +26,9 @@ export default class Auth {
         navigate('/')
     }
 
+    //handle authentication will also redirect the user to loggin page after verification
     handleAuthentication = () => {
+        console.log('handle auth')
         if (typeof window !== 'undefined') {
             // this must've been the trick
             this
@@ -37,13 +36,10 @@ export default class Auth {
                 .parseHash((err, authResult) => {
                     if (authResult && authResult.accessToken && authResult.idToken) {
                         this.setSession(authResult)
-                        console.log('i am in')
+                        navigate('/loggedIn/')
                     } else if (err) {
                         console.log(err)
                     }
-
-                    // get to loggedIn page after auth
-                    navigate('loggedIn')
                 })
         }
     }

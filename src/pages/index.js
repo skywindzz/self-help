@@ -6,6 +6,7 @@ import {Link} from 'gatsby'
 import SEO from "../components/seo"
 import "../style/index.css"
 import Login from '../components/login'
+import Auth from '../utils/auth'
 /* import Img from "gatsby-image" */
 
 setConfig({pureSFC: true});
@@ -13,7 +14,7 @@ setConfig({pureSFC: true});
 const IndexPage = () => {
   const [logged,
     changeLogin] = useState(false)
-
+  
   /* this page is only for looks and intro, top navbar has logo login or new account
   button rest of page will be occupied by slideshow with pictures and quotes, upon
   clicking sign in or sign up modal will appear and ask user to enter information

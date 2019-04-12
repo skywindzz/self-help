@@ -3,11 +3,18 @@ import {ClipLoader} from 'react-spinners'
 
 import Auth from '../utils/auth'
 import useComponentDidMount from '../components/useComponentDidMount'
+import { navigate } from '@reach/router';
 
 const Auth0CallbackPage = () => {
     useComponentDidMount(() => {
         const auth = new Auth()
+        const { isAuthenticated } = auth
         auth.handleAuthentication()
+        if (isAuthenticated()) { 
+            navigate('/loggedIn')
+            console.log('this run')
+        }
+        
         console.log('hitting auth0 callback')
     })
 
