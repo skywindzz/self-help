@@ -42,7 +42,6 @@ const IndexPage = () => {
           <span css={{
             display: 'block'
           }}>user profile</span>
-          <Logout></Logout>
         </header>
 
         <div
@@ -70,9 +69,12 @@ const IndexPage = () => {
         </div>
 
         <div css={{
-          gridArea: 'daily'
+          display: 'flex',
+          gridArea: 'daily',
+          justifyContent: 'space-evenly' 
         }}>
-          <Link to="/daily">Daily page</Link>
+          <Link to="/daily" css={{ marginRight: '120px' }}>Daily page</Link>
+          <Link to="/" css={{ marginLeft: '120px'}}><Logout></Logout></Link>
         </div>
       </div>
     </div>
