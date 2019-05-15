@@ -5,6 +5,8 @@ import {
 import {Link} from 'gatsby'
 import "../style/index.css"
 import Logout from '../components/logout'
+import { FaAutoprefixer } from "react-icons/fa";
+import Img from 'gatsby-image'
 
 setConfig({pureSFC: true});
 
@@ -34,16 +36,22 @@ const IndexPage = () => {
       it will need 3 photos each seperate the planning, habit, daily page which is
       acessable once signed in if not signed in direct to new account page */}
 
-        <header
+        <div
           css={{
           backgroundColor: 'blue',
-          gridArea: 'profile'
+            gridArea: 'profile',
+            display: 'grid',
+            justifyContent: 'center'
         }}>
           <span css={{
-            display: 'block'
+            margin: '0 auto'
           }}>user profile</span>
-        </header>
 
+          {/*check for gatsby udemy example and fill this out  <Img /> */}
+          <span css={{ display: 'block', width: '250px', height: '250px', borderRadius: '50%', backgroundColor: 'white' }}></span>
+          <p css={{ margin: '0 auto' }}>Name</p>
+        </div>          
+    
         <div
           css={{
           backgroundColor: 'hotpink',
