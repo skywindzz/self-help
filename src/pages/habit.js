@@ -7,9 +7,12 @@ import HabitList from '../components/habitList'
 const Habit = () => (
     <div>
         <Navbar></Navbar>
-        <HabitList></HabitList>
-        <HabitCard></HabitCard>
-        <Link to="/">Go back to the homepage</Link>
+        <div css={{ display:'grid', justifyItems: 'center' }}>
+            <HabitCard></HabitCard>
+            
+            <Link to="/">Go back to the homepage</Link>
+            <HabitList></HabitList>
+        </div>
     </div>
 )
 

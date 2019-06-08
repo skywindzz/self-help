@@ -7,7 +7,7 @@ and see if graphql can query from firebase*/
 
 const HabitList = props => {
     return (
-        <h1>This page will display all your habitcards and allow user to add habitcards</h1>
+        <h1>Habit List</h1>
     )
 }
 
