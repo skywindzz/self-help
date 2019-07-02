@@ -16,7 +16,7 @@ on the parent which is the */}
         console.log('setting up here')
     } 
     return (
-        <div css={{ display: 'grid', borderStyle: 'solid', borderWidth: '1px', borderRadius: '10px', width: '80%', justifyContent: 'center', boxShadow: '5px 10px #aaaaaa' }}>
+        <div css={{ lineHeight: '2.3rem', fontFamily: 'sans-serif', display: 'grid', borderStyle: 'solid', borderWidth: '1px', borderRadius: '10px', width: '80%', justifyContent: 'center', boxShadow: '5px 10px #aaaaaa' }}>
             <span css={{ fontSize: '2.5em', marginTop: '0.5em', marginBottom: '0.5em' }}>New Habit Card</span>
             <div>name: <input value={habitName} /></div>
             <div>Priority(1 - 5): <input value={priority} /> </div>
@@ -32,7 +32,7 @@ on the parent which is the */}
             <div>Minimum Duration: <input value={duration} /></div>
             <div>Scheduled Time : <input value={time} /> </div>
 
-            <button onClick={submitHabit} css={{ marginBottom: '10px' }}>submit habit card</button>
+            <button onClick={submitHabit} css={{ marginBottom: '2rem', borderColor: 'lightgreen' }}>submit habit card</button>
         </div>
     )
 }
