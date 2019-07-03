@@ -36,7 +36,7 @@ const IndexPage = () => {
       }}>
         {/*figure out importing auth0 stuff here and make the login work*/}
         <Link to="/about" className="navItem">About Origin</Link>
-        <Login className="loginStyle">login</Login>
+        <Login className="loginStyle navItem">login</Login>
       </nav>
       <div
         className='body'
@@ -50,7 +50,7 @@ const IndexPage = () => {
         marginTop: '20vh',
         minWidth: '600px'
       }}>
-        <span>Quotes here</span>
+        <span>Origin</span>
       </div>
     </div>
   )
