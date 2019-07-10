@@ -7,7 +7,7 @@ const Login = () => {
   const {isAuthenticated} = auth
   
   if (isAuthenticated()) {
-    return <button className="loginSytle" onClick={auth.logout}>Logout {auth.getUserName()}</button>
+    return <button className="loginStyle" onClick={auth.logout}>Logout</button>
   } else {
     return <button className="loginStyle" onClick={auth.login}>Login</button>
   }
