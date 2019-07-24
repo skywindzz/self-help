@@ -8,7 +8,7 @@ const LogOut = () => {
     {/*This component will Logout user and return them to landing page */}
 
     return (
-        <button className="loginStyle" onClick={auth.logout}>Logout why</button>
+        <button className="loginStyle" onClick={auth.logout}>Logout</button>
     )
 }
 

@@ -1,13 +1,27 @@
 import React, { useState } from 'react'
 
-const HabitCard = () => {
-     
-    const [habitName, changeHabitName] = useState('')
-    const [priority, changePriority] = useState('')
-    const [fourLaws, changeFourLaws] = useState([])
-    const [duration, changeDuration] = useState('')
-    const [time, changeTime] = useState('')
-    const [inverse, inverseToTrue] = useState(false)
+
+class Example extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        count: 0
+      };
+    }
+  
+class NewHabitCard extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            habitName = '',
+            priority = 0,
+            inverse = false,
+            fourLaws =[],
+            duration = '',
+            time = ''
+        };
+    }
+    
     
     {/*in this component you'll take the input of the user and save it into the habitCard object 
 on the parent which is the */}
@@ -18,7 +32,7 @@ on the parent which is the */}
     return (
         <div css={{ lineHeight: '2.3rem', fontFamily: 'sans-serif', display: 'grid', borderStyle: 'solid', borderWidth: '1px', borderRadius: '10px', width: '80%', justifyContent: 'center', boxShadow: '5px 10px #aaaaaa' }}>
             <span css={{ fontSize: '2.5em', marginTop: '0.5em', marginBottom: '0.5em' }}>New Habit Card</span>
-            <div>name: <input value={habitName} /></div>
+            <div>Name: <input value={habitName} /></div>
             <div>Priority(1 - 5): <input value={priority} /> </div>
             
             <div>Inverse habit?: <input type='checkbox' value={inverse}/></div>
