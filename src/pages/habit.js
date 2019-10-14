@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import NewHabitCard from '../components/newhabitcard'
+import NewHabitCard from '../components/habitpage/newhabitcard'
 import Navbar from '../components/navbar'
-import HabitList from '../components/habitList'
+import HabitList from '../components/habitpage/habitList'
 
 const Habit = () => (
     <div>
@@ -10,7 +10,7 @@ const Habit = () => (
         <div css={{ display:'grid', justifyItems: 'center' }}>
             <NewHabitCard></NewHabitCard>
             
-            <Link to="/">Go back to the homepage</Link>
+            <Link to="/loggedIn">Go back to Profile page</Link>
             <HabitList></HabitList>
         </div>
     </div>

@@ -16,6 +16,7 @@ const Auth0CallbackPage = () => {
         }
         
         console.log('hitting auth0 callback')
+        console.log(auth);
     })
 
     return (
