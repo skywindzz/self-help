@@ -1,13 +1,13 @@
-import React from "react"
-import { Link } from "gatsby"
-import Navbar from '../components/navbar'
+import React from 'react';
+import { Link } from 'gatsby';
+import Navbar from '../components/navbar';
 
 const Daily = () => (
-    <div>
-        <Navbar></Navbar>
-        <p>This is daily page</p>
-        <Link to="/">Go back to the homepage</Link>
-    </div>
-)
+  <div>
+    <Navbar></Navbar>
+    <p>This is daily page</p>
+    <Link to='/loggedIn'>Go back to Profile page</Link>
+  </div>
+);
 
-export default Daily
+export default Daily;
