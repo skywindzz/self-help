@@ -1,17 +1,18 @@
-body,html {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    height: 100vh;
-    overflow: hidden;
-    font-family: Helvetica Neue;
-    grid-template-rows: 100px auto;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-     "navigation"
-     "content"
+body,
+html {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Helvetica Neue;
+  grid-template-rows: 100px auto;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'navigation'
+    'content';
 
-    /* might want to look for another background
+  /* might want to look for another background
     background: linear-gradient(rgba(37,35,35,0.5), rgba(37, 35, 35, 0.5)), url('../images/stone-water-ripple-clipart-10-1170x658.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -22,28 +23,43 @@ body,html {
     */
 }
 
+.header {
+  height: 100vh;
+}
+
+.video-background {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  z-index: -1;
+  filter: grayscale(100%);
+}
+
 .nav {
-    grid-area: navigation;
+  grid-area: navigation;
+  background-color: white;
 }
 
 .loginStyle {
-    border: none;
-    text-decoration: none;
-    margin-right: 2em;
-    font-size: 1em;
+  border: none;
+  text-decoration: none;
+  margin-right: 2em;
+  font-size: 1em;
+  outline: none;
+  background: transparent;
 }
 .body {
-   grid-area: content;
-   grid-template-rows: 1fr min-content;
-   height: 100vh;
+  grid-area: content;
+  grid-template-rows: 1fr min-content;
+  height: 100vh;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
 .navItem {
-    margin-right: 2em;
-    text-decoration: none;
+  margin-right: 3em;
+  text-decoration: none;
 }
