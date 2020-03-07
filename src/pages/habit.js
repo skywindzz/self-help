@@ -11,11 +11,6 @@ const Habit = () => (
       <Link to='/profile'>Go back to Profile page</Link>
       <NewHabitCard></NewHabitCard>
       <HabitList></HabitList>
-      <p>
-        checkboxes for tracking daily habits and also track how many consequtive
-        days a person can do the habit(maybe add some graphic for each success
-        day
-      </p>
     </div>
   </div>
 );

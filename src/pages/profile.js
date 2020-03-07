@@ -40,7 +40,7 @@ const IndexPage = () => {
             backgroundColor: 'blue',
             gridArea: 'profile',
             display: 'grid',
-            justifyContent: 'center'
+            justifyItems: 'center'
           }}
         >
           <span
@@ -62,7 +62,10 @@ const IndexPage = () => {
             }}
           ></span>
           <p css={{ margin: '0 auto' }}>Name</p>
-          <Link to='/' css={{ marginLeft: '120px' }}>
+          <p css={{ margin: '0 auto ' }}>
+            include highest habit streaks, total task completed
+          </p>
+          <Link to='/'>
             <Logout></Logout>
           </Link>
         </div>
