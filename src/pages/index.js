@@ -16,7 +16,14 @@ const IndexPage = () => {
   return (
     <div className='container'>
       <SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
-      <section>
+      <aside>Dream, Plan, Execute</aside>
+      <div className='content'>
+        <div className='title'>RISE</div>
+        <h1 className='subtitleOne'>Dream, Plan, Execute</h1>
+        <h1 className='subtitleTwo'>Personal dream planner</h1>
+        <Login className='loginStyle'></Login>
+      </div>
+      <section className='video'>
         <video
           autoPlay
           loop
@@ -27,12 +34,6 @@ const IndexPage = () => {
           <source src={video} type='video/mp4' />
         </video>
       </section>
-      <div className='nav'>
-        <Link to='/about' className='navItem'>
-          About Origin
-        </Link>
-        <Login className='loginStyle navItem'>login</Login>
-      </div>
     </div>
   );
 };
